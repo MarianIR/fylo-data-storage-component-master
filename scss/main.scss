@@ -1,0 +1,188 @@
+@import "variables", "reset";
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-section {
+  display: block;
+  width: 90%;
+  max-width: 30rem;
+  margin: 5rem auto;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 80%;
+    height: 40%;
+    margin-top: 10rem;
+  }
+  .fylo {
+    width: 100%;
+    max-width: 30rem;
+    background-color: $neutralColor3;
+    border-radius: 1rem 10rem 1rem 1rem;
+    padding-bottom: 2rem;
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 40rem;
+      height: 25rem;
+    }
+    .fylo-logo {
+      width: 12rem;
+      height: 3.5rem;
+      margin: 2rem;
+    }
+    .icons {
+      width: 60%;
+      max-width: 20rem;
+      margin: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      @media (min-width: 768px) {
+        display: flex;
+        max-width: 30rem;
+      }
+      .document-btn {
+        border-radius: 0.5rem;
+        border: none;
+        background-color: $neutralColor4;
+        margin: 0.5rem;
+        .document-icon {
+          padding: 1rem;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      .folder-btn {
+        @extend .document-btn;
+        .folder-icon {
+          @extend .document-icon;
+        }
+      }
+      .upload-btn {
+        @extend .document-btn;
+        .upload-icon {
+          @extend .document-icon;
+          width: 4.5rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+  .storage {
+    width: 100%;
+    max-width: 30rem;
+    background-color: $neutralColor3;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    @media (min-width: 768px) {
+      max-width: 50rem;
+      margin-left: 2rem;
+      height: 20rem;
+    }
+    .header {
+      display: block;
+      text-align: center;
+      padding: 2rem 0 1rem;
+      color: $neutralColor1;
+      font-weight: 300;
+      font-size: 1.5rem;
+      strong {
+        color: #fff;
+      }
+    }
+    .full-bar {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      height: 2rem;
+      margin: 2rem auto 0;
+      background-color: $neutralColor4;
+      border-radius: 5rem;
+      .ocupied-bar {
+        display: flex;
+        align-items: center;
+        width: 75%;
+        height: 1.5rem;
+        background-image: $primaryColor1;
+        border-radius: 5rem;
+        margin-left: 0.3rem;
+        .circle {
+          background-color: rgb(247, 247, 247);
+          width: 1.3rem;
+          height: 1.3rem;
+          border-radius: 50%;
+          margin: 0 0.2rem 0 auto;
+        }
+      }
+    }
+    .full-storage {
+      width: 90%;
+      margin: 0.5rem auto 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .zero-gb {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+      .oneThousand-gb {
+        @extend .zero-gb;
+      }
+    }
+    .left-storage {
+      width: 70%;
+      margin: 2rem auto -5.5rem;
+      border-radius: 1rem;
+      background-color: #fff;
+      text-align: center;
+      font-size: 1.2rem;
+      color: $neutralColor2;
+      padding: 1.5rem 2rem;
+      font-weight: bold;
+      @media (min-width: 768px) {
+        max-width: 20rem;
+        position: absolute;
+        margin: -18.1rem 0rem 0rem 28rem;
+        &::after {
+          content: " ";
+          position: absolute;
+          right: 0.05rem;
+          bottom: -1.2rem;
+          border-top: 2rem solid #fff;
+          border-right: 0.1rem solid transparent;
+          border-left: 2.5rem solid transparent;
+          border-bottom: none;
+        }
+      }
+      strong {
+        font-size: 3.5rem;
+        color: $neutralColor4;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-top: 10rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(233, 233, 233);
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
